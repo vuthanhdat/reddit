@@ -1,0 +1,7 @@
+git checkout -b link_scaffold
+rails g scaffold link title:string url:string
+rake db:migrate
+
+git status
+git add .
+git commit -am "Gennerate link scaffold"
