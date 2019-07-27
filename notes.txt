@@ -8,7 +8,7 @@ git commit -am "Gennerate link scaffold"
 
 git checkout master
 git merge link_scaffold
-
+===========================================================================================================================
 * add devise gem in gem file gem 'devise', '~> 4.2'
 bundle install
 
@@ -42,4 +42,15 @@ Some setup you must do manually if you haven't yet:
   4. You can copy Devise views (for customization) to your app by running:
 
        rails g devise:views
+rails g devise user
+rake:db
 
+git commit
+
+===========================================================================================================================
+Add relation between user and link
+using rails console to test relation
+after that migration db to add userid to link table
+
+    rails g migration add_user_id_to_links user_id:integer:index
+to confirm use rails console again
