@@ -54,3 +54,6 @@ after that migration db to add userid to link table
 
     rails g migration add_user_id_to_links user_id:integer:index
 to confirm use rails console again
+
+in LinkController add before_filter: authenticate_user, except: [:index, :show]
+change Link.new --> current_user.links.build in 2 function new and create
